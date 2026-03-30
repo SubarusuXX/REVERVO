@@ -1,0 +1,99 @@
+:root {
+    --primary: rgba(13, 18, 30, 1);
+    --dark: rgba(13, 18, 30, 1) ;
+    --danger: red;
+    --success: rgba(51, 204, 89, 1);
+    --white: white; 
+}
+    
+#root{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}   
+
+header {
+    background-color: var(--primary);
+}
+
+header > div {
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+header > div:hover {
+    background-color : rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+
+header img {
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+
+header span:not(.mdi) {
+    margin-bottom: -10px;
+}
+
+header span.mdi{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+header small {
+    display: block;
+    margin-top: -20px;
+}
+
+sidebar {
+    background-color: var(--dark);
+}
+
+sidebar ul li {
+    list-style: none;
+    width: 100%;
+}
+
+sidebar ul li a{
+    width: 100%;
+    color: #ffffff;
+    opacity: 0.6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    margin: 2.5px 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+sidebar ul li a.active {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+sidebar ul li a.active .mdi{
+    color: var(--white)
+}
+
+sidebar ul li a.visited,
+sidebar ul li a.focus{
+    color: #fff
+}
+
+sidebar ul li a:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+sidebar ul li a span.mdi {
+    font-size: 25px;
+    margin: 0 15px;
+}
+
+sidebar ul li a text {
+    font-size: 14px;
+}

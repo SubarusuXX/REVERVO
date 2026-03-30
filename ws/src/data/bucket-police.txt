@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AddCannedAcl",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::416911025072:user/DevUsuarioRev"
+      },
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": "arn:aws:s3:::salao-na-mao-dev/*",
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "public-read"
+        }
+      }
+    }
+  ]
+}
+
+resumindo:
+Resumindo: Você está dizendo para a Amazon: "Permita que meu usuário '' 
+coloque arquivos no meu bucket, mas só se ele prometer que esses arquivos serão públicos para leitura".
