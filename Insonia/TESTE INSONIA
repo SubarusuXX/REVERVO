@@ -1,0 +1,614 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Projeto_RESERVO
+meta:
+  id: wrk_830a648ebed94f329573472f7d499bb4
+  created: 1772463227992
+  modified: 1774718404201
+  description: ""
+collection:
+  - name: RESERVO_SOFTWARE
+    meta:
+      id: fld_e49f0d9664144a45a6c8976ac241b2c3
+      created: 1773185540656
+      modified: 1774744277499
+      sortKey: -1773185540656
+      description: ""
+    children:
+      - name: RESERVO
+        meta:
+          id: fld_2a459f397fa14cf7bea46155ce9fc239
+          created: 1772463238951
+          modified: 1774746194776
+          sortKey: -1773185552310
+          description: ""
+        children:
+          - url: http://localhost:8000/salao
+            name: ADD
+            meta:
+              id: req_31591977fa90498799a0257eba233471
+              created: 1772463227998
+              modified: 1773185491785
+              isPrivate: false
+              description: ""
+              sortKey: -1773185491767
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"nome": "Salao Ideal",
+                	"foto": 
+                	"https://th.bing.com/th/id/OIP.nI-AYaRavnalh7qWPW9zhQHaHa?w=186&h=187&c=7&r=0&o=7&pid=1.7&rm=3",
+                	"capa": "https://th.bing.com/th/id/OIP.olFqgEusmI0SisDJs7DMyAHaHa?w=186&h=187&c=7&r=0&o=7&pid=1.7&rm=3",
+                	"email": "emailteste.com",
+                	"senha": "123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/salao/servicos/69a5e773ec5b8f6dcebad6b7
+            name: SERVICOS
+            meta:
+              id: req_8dd0eaa7a0f645f3beb395c8eb72ac5c
+              created: 1773173197110
+              modified: 1773185494111
+              isPrivate: false
+              description: ""
+              sortKey: -1773185491867
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/salao/69a5e773ec5b8f6dcebad6b7
+            name: GET
+            meta:
+              id: req_a0ed5bd1addd42e590e494b81e38037d
+              created: 1773173470196
+              modified: 1774717396178
+              isPrivate: false
+              description: ""
+              sortKey: -1773185492067
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: HORARIO
+        meta:
+          id: fld_c7af2c36612a4308b3e68e12c6a919af
+          created: 1773185576890
+          modified: 1774835467699
+          sortKey: -1773185576890
+          description: ""
+        children:
+          - url: http://localhost:8000/horario
+            name: ADD
+            meta:
+              id: req_493cd227d1aa4684a3b8c074b929abe0
+              created: 1773185587983
+              modified: 1774053402486
+              isPrivate: false
+              description: ""
+              sortKey: -1773185587983
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7",
+                 	"especialidades": ["69b04d83d1a950ebcf76ce90"],
+                 	"colaboradores": ["69b35514336bccf8fb76e253"],
+                 	"dias":[0,1,2],
+                 	"inicio":"2026-03-07T10:00",
+                  "fim": "2026-03-07T20:00"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/horario/salao/69a5e773ec5b8f6dcebad6b7
+            name: HORARIOS DO SALAO
+            meta:
+              id: req_88a0a61e8bca400087d6e72e4163be9f
+              created: 1773537384991
+              modified: 1773537520600
+              isPrivate: false
+              description: ""
+              sortKey: -1773185539975
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/horario/69b5eeab0246c5cc2d3ddbf7
+            name: UPDATE
+            meta:
+              id: req_761ab5fd63b94398add8ce70980bf158
+              created: 1773537669891
+              modified: 1773538011105
+              isPrivate: false
+              description: ""
+              sortKey: -1773185563979
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"dias":[0,1,2,6]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/horario/69b60a656e3eb765aa416e96
+            name: DELETE
+            meta:
+              id: req_fc6cb865619c4b58880fc6fb98b9d08f
+              created: 1773538027477
+              modified: 1773538038793
+              isPrivate: false
+              description: ""
+              sortKey: -1773185551977
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/horario/colaboradores
+            name: COLABORADORES
+            meta:
+              id: req_7f5280499a7c4dd390b32b8923d2a42d
+              created: 1773538495291
+              modified: 1773538631089
+              isPrivate: false
+              description: ""
+              sortKey: -1773185575981
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                 	"especialidades": ["69b04d83d1a950ebcf76ce90"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: COLABORADOR
+        meta:
+          id: fld_5d35b22982ca46feae28786367124e68
+          created: 1773274710464
+          modified: 1774893933208
+          sortKey: -1773274710464
+          description: ""
+        children:
+          - url: http://localhost:8000/colaborador
+            name: ADD
+            meta:
+              id: req_2deb95266f0c45d7aad598d08f1aba4c
+              created: 1773274715309
+              modified: 1773427087518
+              isPrivate: false
+              description: ""
+              sortKey: -1773274715309
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7",
+                	"colaborador": {
+                	"nome": "Robson Jalin",
+                	"telefone": "46999888047",
+                	"email": "teste@colaborador.com.br",
+                	"foto": "https://i.imgflip.com/2/28vcbz.jpg",
+                	"dataNascimento": "1997-03-21",
+                	"sexo": "M",
+                	"vinculo":"A",
+                	"especialidades": ["69b04d83d1a950ebcf76ce90"]
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/colaborador/69b35514336bccf8fb76e253
+            name: UPDATE
+            meta:
+              id: req_89c2d9e0552d4e18b5888b9e8ca33cb1
+              created: 1773447110845
+              modified: 1773447383780
+              isPrivate: false
+              description: ""
+              sortKey: -1773230151646
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"vinculo": "I",
+                	"vinculoId":"69b35515336bccf8fb76e256",
+                	"especialidades": ["69b04d83d1a950ebcf76ce90",
+                	"69b4a88c6a0a5a70d6520854"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/colaborador/vinculo/69b35515336bccf8fb76e256
+            name: DELETE VINCULO
+            meta:
+              id: req_561a07891901486081667fd87c3cc00c
+              created: 1773447846350
+              modified: 1773447985965
+              isPrivate: false
+              description: ""
+              sortKey: -1773207869814.5
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/colaborador/filter
+            name: FILTER
+            meta:
+              id: req_c1ca5a4010634b1b98d837d24cfb2502
+              created: 1773526434321
+              modified: 1773526571932
+              isPrivate: false
+              description: ""
+              sortKey: -1773252433477.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"filters": {
+                		"sexo": "M"
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/colaborador/salao/69a5e773ec5b8f6dcebad6b7
+            name: SALAO COLABORADORES
+            meta:
+              id: req_e21d25265bd54db69453be952371cb02
+              created: 1773526828023
+              modified: 1773526862663
+              isPrivate: false
+              description: ""
+              sortKey: -1773241292561.75
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: CLIENTE
+        meta:
+          id: fld_1fd7207eb93e47439a2fe22d9c282e3a
+          created: 1773616104848
+          modified: 1773617277385
+          sortKey: -1773616104848
+          description: ""
+        children:
+          - url: http://localhost:8000/cliente
+            name: ADD
+            meta:
+              id: req_67249e73403e49a2ab7ab7240d3805b1
+              created: 1773616123572
+              modified: 1774733688448
+              isPrivate: false
+              description: ""
+              sortKey: -1773445414048.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"cliente": {
+                		"nome": "Mathias Machado",
+                		"email": "matias@teste.com",
+                		"telefone":"46999333047",
+                		"dataNascimento":"1999-02-20",
+                		"sexo":"F"
+                	},
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/cliente/salao/69a5e773ec5b8f6dcebad6b7
+            name: SL CLIENTES
+            meta:
+              id: req_505355cbc7ae48d598a56a1200a862f3
+              created: 1773617255351
+              modified: 1773617298221
+              isPrivate: false
+              description: ""
+              sortKey: -1773445414148.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: AGENDAMENTO
+        meta:
+          id: fld_e71aef62714d496185a6d5a5f5967aeb
+          created: 1773687062030
+          modified: 1774743570771
+          sortKey: -1773687062030
+          description: ""
+        children:
+          - url: http://localhost:8000/agendamento/filter
+            name: FILTER
+            meta:
+              id: req_a3ce76e779ac45ab9a1c3838a469ed9f
+              created: 1773687067983
+              modified: 1774572250890
+              isPrivate: false
+              description: ""
+              sortKey: -1773687067983
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7",
+                	"periodo":{
+                		"inicio":"2026-03-21",
+                		"final":"2026-03-22"
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/agendamento
+            name: ADD
+            meta:
+              id: req_29c1b57e1c1d4b5e8cc07a4d4f004f54
+              created: 1773687075487
+              modified: 1774898442702
+              isPrivate: false
+              description: ""
+              sortKey: -1773566241065.75
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"clienteId": "69c849794ffb9fbc7dec9426",
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7",
+                	"servicoId":"69b04d83d1a950ebcf76ce90",
+                	"colaboradorId":"69b35514336bccf8fb76e253",
+                	"data": "2026-04-03T10:30:00Z"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/agendamento/dias-disponiveis
+            name: DIAS DISPONIVEIS
+            meta:
+              id: req_48c924327f5d48cfa50f9a2640cdcee6
+              created: 1773702423559
+              modified: 1774054031120
+              isPrivate: false
+              description: ""
+              sortKey: -1773626654524.375
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"salaoId": "69a5e773ec5b8f6dcebad6b7",
+                	"servicoId": "69b04d83d1a950ebcf76ce90",
+                		"data":"2026-03-19"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_046a99d133b13796b96b41269394f899f43476e3
+    created: 1772463227995
+    modified: 1772463227995
+environments:
+  name: Base Environment
+  meta:
+    id: env_046a99d133b13796b96b41269394f899f43476e3
+    created: 1772463227994
+    modified: 1772463227994
+    isPrivate: false
